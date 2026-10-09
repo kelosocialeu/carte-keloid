@@ -1,5 +1,5 @@
 {
-  "defaultStatus": "red",
+  "defaultStatus": "gray",
   "countries": {
     "124": {
       "status": "red",
