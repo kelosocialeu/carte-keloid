@@ -1,6 +1,36 @@
 {
   "defaultStatus": "red",
   "countries": {
+    "124": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Canada)."
+    },
+    "180": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (RDC)."
+    },
+    "192": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Cuba)."
+    },
+    "208": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Danemark)."
+    },
+    "231": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Éthiopie)."
+    },
+    "242": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Fidji)."
+    },
     "250": {
       "status": "green",
       "date": "",
@@ -11,30 +41,155 @@
       "date": "",
       "note": "La vérification NFC est intégrée dans Kelo ID."
     },
+    "356": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Inde)."
+    },
+    "372": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Irlande)."
+    },
     "380": {
       "status": "green",
       "date": "",
       "note": "La vérification NFC est intégrée dans Kelo ID."
+    },
+    "410": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Corée du Sud)."
+    },
+    "450": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Madagascar)."
+    },
+    "458": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Malaisie)."
+    },
+    "484": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Mexique)."
+    },
+    "508": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Mozambique)."
     },
     "528": {
       "status": "green",
       "date": "",
       "note": "La vérification NFC est intégrée dans Kelo ID."
     },
+    "554": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Nouvelle-Zélande)."
+    },
+    "598": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Papouasie-Nouvelle-Guinée)."
+    },
+    "608": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Philippines)."
+    },
     "620": {
       "status": "green",
       "date": "",
       "note": "La vérification NFC est intégrée dans Kelo ID."
+    },
+    "643": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Russie)."
+    },
+    "702": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Singapour)."
+    },
+    "716": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Zimbabwe)."
     },
     "724": {
       "status": "green",
       "date": "",
       "note": "La vérification NFC est intégrée dans Kelo ID."
     },
+    "756": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Suisse)."
+    },
+    "764": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Thaïlande)."
+    },
+    "776": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Tonga)."
+    },
+    "800": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Ouganda)."
+    },
+    "826": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Royaume-Uni)."
+    },
+    "834": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Tanzanie)."
+    },
+    "840": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (États-Unis)."
+    },
+    "882": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Samoa)."
+    },
+    "894": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Zambie)."
+    },
     "056": {
       "status": "green",
       "date": "",
       "note": "La vérification NFC est intégrée dans Kelo ID."
+    },
+    "036": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Australie)."
+    },
+    "076": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Brésil)."
+    },
+    "024": {
+      "status": "red",
+      "date": "",
+      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Angola)."
     }
   }
 }
