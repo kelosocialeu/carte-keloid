@@ -90,10 +90,9 @@ module.exports = async function handler(req, res) {
       }
     }
     const note = typeof value.note === "string" ? value.note.trim().slice(0, 300) : "";
-    // Red without a date/note is represented by the global default to keep the JSON compact.
-    if (value.status !== "red" || date || note) {
-      countries[id] = { status: value.status, date, note };
-    }
+    // Keep every submitted country in memory until the merge step below.
+    // A plain red status means "use the default" and removes any old override.
+    countries[id] = { status: value.status, date, note };
   }
 
   try {
