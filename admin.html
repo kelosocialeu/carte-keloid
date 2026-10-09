@@ -29,7 +29,7 @@ function showMessage(kind,text){const node=kind==="error"?$("#error"):$("#messag
 function clearMessages(){$("#error").classList.remove("show");$("#message").classList.remove("show")}
 async function api(url,options={}){const r=await fetch(url,{credentials:"same-origin",cache:"no-store",...options,headers:{"Content-Type":"application/json",...(options.headers||{})}});const data=await r.json().catch(()=>({}));if(!r.ok)throw new Error(data.error||"Erreur de communication avec le serveur.");return data}
 function countryName(f){return f.properties?.name||("Pays "+String(f.id).padStart(3,"0"))}
-function current(id){return config.countries[id]||{status:config.defaultStatus||"red",date:"",note:""}}
+function current(id){return config.countries[id]||{status:config.defaultStatus||"gray",date:"",note:""}}
 async function loadConfig(){config=await api("/api/admin/countries");await loadWorld();$("#loginCard").classList.add("hidden");$("#adminApp").classList.remove("hidden");render();clearMessages()}
 async function loadWorld(){const response=await fetch("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json");if(!response.ok)throw new Error("Impossible de charger la liste des pays.");const world=await response.json();features=topojson.feature(world,world.objects.countries).features.filter(f=>String(f.id).padStart(3,"0")!=="010").sort((a,b)=>countryName(a).localeCompare(countryName(b),"fr"))}
 function updateMetrics(){const counts={green:0,red:0,gray:0};features.forEach(f=>{const s=current(String(f.id).padStart(3,"0")).status;if(counts[s]!==undefined)counts[s]++});$("#greenCount").textContent=counts.green;$("#redCount").textContent=counts.red;$("#grayCount").textContent=counts.gray;$("#allCount").textContent=features.length}
