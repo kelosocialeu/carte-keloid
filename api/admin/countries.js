@@ -80,8 +80,14 @@ module.exports = async function handler(req, res) {
       return json(res, 400, { error: "Chaque pays doit avoir un statut vert, rouge ou gris." });
     }
     const date = typeof value.date === "string" ? value.date : "";
-    if (date && !/^\d{4}-\d{2}-\d{2}$/.test(date)) {
-      return json(res, 400, { error: "Une date doit utiliser le format AAAA-MM-JJ." });
+    if (date) {
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+        return json(res, 400, { error: "Une date doit utiliser le format AAAA-MM-JJ." });
+      }
+      const parsedDate = new Date(date + "T00:00:00.000Z");
+      if (Number.isNaN(parsedDate.getTime()) || parsedDate.toISOString().slice(0, 10) !== date) {
+        return json(res, 400, { error: "La date indiquée n’est pas valide." });
+      }
     }
     const note = typeof value.note === "string" ? value.note.trim().slice(0, 300) : "";
     // Red without a date/note is represented by the global default to keep the JSON compact.
