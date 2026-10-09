@@ -30,6 +30,11 @@
       "status": "green",
       "date": "",
       "note": "La vérification NFC est intégrée dans Kelo ID."
+    },
+    "056": {
+      "status": "green",
+      "date": "",
+      "note": "La vérification NFC est intégrée dans Kelo ID."
     }
   }
 }
