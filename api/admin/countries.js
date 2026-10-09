@@ -97,8 +97,21 @@ module.exports = async function handler(req, res) {
   }
 
   try {
-    const { sha } = await readConfig();
-    const config = { defaultStatus: "red", countries };
+    const { config: existingConfig, sha } = await readConfig();
+
+    // Merge with the existing code-based configuration so a country omitted
+    // by an older or filtered admin UI cannot silently disappear. Explicitly
+    // submitted red/default entries remove any previous override.
+    const mergedCountries = { ...(existingConfig.countries || {}) };
+    for (const [id, value] of Object.entries(countries)) {
+      if (value.status === "red" && !value.date && !value.note) {
+        delete mergedCountries[id];
+      } else {
+        mergedCountries[id] = value;
+      }
+    }
+
+    const config = { defaultStatus: "red", countries: mergedCountries };
     const content = Buffer.from(JSON.stringify(config, null, 2) + "\n", "utf8").toString("base64");
     const commit = await github("/repos/" + OWNER + "/" + REPO + "/contents/" + PATH, {
       method: "PUT",
