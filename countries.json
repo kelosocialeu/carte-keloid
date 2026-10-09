@@ -1,0 +1,35 @@
+{
+  "defaultStatus": "red",
+  "countries": {
+    "250": {
+      "status": "green",
+      "date": "",
+      "note": "La vérification NFC est intégrée dans Kelo ID."
+    },
+    "276": {
+      "status": "green",
+      "date": "",
+      "note": "La vérification NFC est intégrée dans Kelo ID."
+    },
+    "380": {
+      "status": "green",
+      "date": "",
+      "note": "La vérification NFC est intégrée dans Kelo ID."
+    },
+    "528": {
+      "status": "green",
+      "date": "",
+      "note": "La vérification NFC est intégrée dans Kelo ID."
+    },
+    "620": {
+      "status": "green",
+      "date": "",
+      "note": "La vérification NFC est intégrée dans Kelo ID."
+    },
+    "724": {
+      "status": "green",
+      "date": "",
+      "note": "La vérification NFC est intégrée dans Kelo ID."
+    }
+  }
+}
