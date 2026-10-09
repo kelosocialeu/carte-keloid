@@ -27,7 +27,7 @@ function addCountries(ids){const present=new Set(selectedIds);ids.forEach(id=>{i
 $('countryResults').addEventListener('click',e=>{const b=e.target.closest('[data-add-country]');if(b)addCountries([b.dataset.addCountry])});
 $('selectedCountries').addEventListener('click',e=>{const b=e.target.closest('[data-remove-country]');if(b){selectedIds=selectedIds.filter(id=>id!==b.dataset.removeCountry);renderSelected()}});
 $('countrySearch').addEventListener('input',renderCountryPicker);
-$('addSearchResults').addEventListener('click',()=>{const q=normalize($('countrySearch').value),selected=new Set(selectedIds),list=countries.filter(c=>!selected.has(c.id)&&(!q||normalize(c.name).includes(q)||c.id.includes(q))).slice(0,80);addCountries(list.map(c=>c.id))});
+$('addSearchResults').addEventListener('click',()=>{const q=normalize($('countrySearch').value),selected=new Set(selectedIds),list=countries.filter(c=>!selected.has(c.id)&&(!q||normalize(c.name).includes(q)||c.id.includes(q));addCountries(list.map(c=>c.id))});
 $('addAllCountries').addEventListener('click',()=>addCountries(countries.map(c=>c.id)));
 $('clearSelected').addEventListener('click',()=>{selectedIds=[];renderSelected()});
 $('resetBtn').addEventListener('click',()=>{$('status').value='gray';$('note').value='';$('targetDate').value='';$('saveMessage').className='message'});
