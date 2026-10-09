@@ -39,7 +39,7 @@ const flags={'250':'🇫🇷','724':'🇪🇸','620':'🇵🇹','380':'🇮🇹'
 let features=[],path,svg,selected=null;
 const statusFor=id=>DATA[id]?.status||'gray';
 function countryName(f){const id=String(f.id).padStart(3,'0');return names.get(id)||f.properties?.name||('Pays · '+id)}
-function normalizeSearch(value){return String(value||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLocaleLowerCase('fr').replace(/[^a-z0-9]/g,'')}
+function normalizeSearch(value){return String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('fr').replace(/[^a-z0-9]/g,'')}
 function matchesSearch(f,query){if(!query)return true;const id=String(f.id).padStart(3,'0');const candidates=[countryName(f),f.properties?.name,...(searchAliases[id]||[])];return candidates.some(name=>normalizeSearch(name).includes(normalizeSearch(query)))}
 function drawMap(world){
  const countries=topojson.feature(world,world.objects.countries).features;
