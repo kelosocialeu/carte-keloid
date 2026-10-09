@@ -110,7 +110,7 @@ module.exports = async function handler(req, res) {
       }
     }
 
-    const config = { defaultStatus: "red", countries: mergedCountries };
+    const config = { defaultStatus: "gray", countries: mergedCountries };
     const content = Buffer.from(JSON.stringify(config, null, 2) + "\n", "utf8").toString("base64");
     const commit = await github("/repos/" + OWNER + "/" + REPO + "/contents/" + PATH, {
       method: "PUT",
