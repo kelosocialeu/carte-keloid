@@ -29,11 +29,12 @@ const DATA={
  '620':{status:'green',note:'Pays marqué comme pris en charge selon la configuration demandée.'},
  '380':{status:'green',note:'Pays marqué comme pris en charge selon la configuration demandée.'},
  '528':{status:'green',note:'Pays marqué comme pris en charge selon la configuration demandée.'},
- '276':{status:'green',note:'Pays marqué comme pris en charge selon la configuration demandée.'}
+ '276':{status:'green',note:'Pays marqué comme pris en charge selon la configuration demandée.'},
+ '056':{status:'green',note:'La vérification NFC est intégrée dans Kelo ID.'}
 };
 const COLORS={green:'#31d69a',red:'#ff657b',gray:'#687084',unknown:'#35405a'};
-const names=new Map(Object.entries({'250':'France','724':'Espagne','620':'Portugal','380':'Italie','528':'Pays-Bas','276':'Allemagne'}));
-const flags={'250':'🇫🇷','724':'🇪🇸','620':'🇵🇹','380':'🇮🇹','528':'🇳🇱','276':'🇩🇪'};
+const names=new Map(Object.entries({'250':'France','724':'Espagne','620':'Portugal','380':'Italie','528':'Pays-Bas','276':'Allemagne','056':'Belgique'}));
+const flags={'250':'🇫🇷','724':'🇪🇸','620':'🇵🇹','380':'🇮🇹','528':'🇳🇱','276':'🇩🇪','056':'🇧🇪'};
 let features=[],path,svg,selected=null;
 const statusFor=id=>DATA[id]?.status||'red';
 function countryName(f){const id=String(f.id).padStart(3,'0');return names.get(id)||f.properties?.name||('Pays · '+id)}
