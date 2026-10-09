@@ -2,9 +2,9 @@
   "defaultStatus": "gray",
   "countries": {
     "124": {
-      "status": "red",
+      "status": "gray",
       "date": "",
-      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Canada)."
+      "note": "Compatibilité NFC non encore confirmée pour les documents concernés (Canada)."
     },
     "180": {
       "status": "red",
@@ -157,9 +157,9 @@
       "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (Tanzanie)."
     },
     "840": {
-      "status": "red",
+      "status": "gray",
       "date": "",
-      "note": "Compatibilité NFC non confirmée — à vérifier avant activation dans Kelo ID (États-Unis)."
+      "note": "Compatibilité NFC non encore confirmée pour les documents concernés (États-Unis d’Amérique)."
     },
     "882": {
       "status": "red",
