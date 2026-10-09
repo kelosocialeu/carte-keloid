@@ -49,6 +49,7 @@ function drawMap(world){
  .attr('fill',f=>COLORS[statusFor(String(f.id).padStart(3,'0'))]||COLORS.gray)
  .attr('data-id',f=>String(f.id).padStart(3,'0')).attr('tabindex',0).attr('role','button')
  .attr('aria-label',f=>countryName(f)+', '+labelStatus(statusFor(String(f.id).padStart(3,'0'))))
+ .each(function(f){const id=String(f.id).padStart(3,'0'),entry=DATA[id]||{},status=statusFor(id);let tip=countryName(f)+' — '+labelStatus(status);if(status==='red'&&entry.date){const date=new Date(entry.date+'T12:00:00');tip+=' · Bientôt disponible le '+(Number.isNaN(date.getTime())?entry.date:date.toLocaleDateString('fr-BE',{day:'numeric',month:'long',year:'numeric'}))}d3.select(this).append('title').text(tip)})
  .on('click',(e,f)=>showDetail(f)).on('keydown',(e,f)=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();showDetail(f)}});
  svg.call(d3.zoom().scaleExtent([1,7]).on('zoom',e=>g.attr('transform',e.transform)));
  updateStats();renderList();
