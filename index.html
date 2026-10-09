@@ -36,10 +36,10 @@ const names=new Map(Object.entries({'056':'Belgique','380':'Italie','724':'Espag
 const flags={'056':'🇧🇪','380':'🇮🇹','724':'🇪🇸','620':'🇵🇹','528':'🇳🇱','276':'🇩🇪'};
 let features=[],path,svg,selected=null;
 const statusFor=id=>DATA[id]?.status||'unknown';
-function countryName(f){return names.get(f.id)||f.properties?.name||'Pays inconnu'}
+function countryName(f){const id=String(f.id).padStart(3,'0');return names.get(id)||f.properties?.name||('Pays · '+id)}
 function drawMap(world){
  const countries=topojson.feature(world,world.objects.countries).features;
- features=countries.filter(f=>f.id!=='010'&&f.id!=='0100');
+ features=countries.filter(f=>String(f.id).padStart(3,'0')!=='010');
  const width=1100,height=530;
  svg=d3.select('#map').html('').append('svg').attr('class','map').attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label','Carte du monde interactive des statuts NFC Kelo ID');
  const projection=d3.geoNaturalEarth1().fitExtent([[12,15],[width-12,height-15]],{type:'FeatureCollection',features});
